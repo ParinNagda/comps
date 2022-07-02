@@ -1,0 +1,13 @@
+<app-divider>Modal</app-divider>
+<button class="btn" (click)="toggleModal()">Show Modal</button>
+<app-modal (close)="toggleModal()" *ngIf="modalState">
+    <header>
+        MODAL!
+    </header>
+    <p>Some Content here</p>
+    <ng-container modalFooter>
+        <button (click)="toggleModal()" class="ui button">Close mee</button>
+    </ng-container>
+</app-modal>
+<app-divider>Accordion</app-divider>
+<app-accordion [itemList]="items"></app-accordion>
